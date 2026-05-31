@@ -3,7 +3,7 @@
 
 ---
 
-## FASE ACTUAL: FASE 0 — Preparación (arquitectura completada)
+## FASE ACTUAL: FASE 1 — Core jugable (en progreso)
 
 ---
 
@@ -20,79 +20,117 @@
 - [x] roxy.json v2 — rutinas detalladas semana/fin de semana
 - [x] luna.json v2 — rutinas detalladas semana/fin de semana
 
-### Arquitectura (completado en esta sesión)
+### Arquitectura
 - [x] VARIABLES_GLOBALES.md v1.0 — verificado contra Ren'Py 8.5.3 docs oficiales
-  - 14 secciones de variables con tipos, rangos y módulos responsables
-  - Advertencias críticas sobre listas y saves documentadas
-  - Distinción default/define/persistent verificada y documentada
 - [x] ESTANDARES.md v1.0 — nomenclatura, estructura y reglas completas
-  - Prefijos por módulo para todas las variables
-  - Aliases de personajes (cel, rox, lun, nar, pro)
-  - Estructura de archivos .rpy con encabezado obligatorio
-  - Patrón correcto de listas para saves
-  - Checklist de push a GitHub
 
-### Decisiones de diseño cerradas
-- [x] Ciudad: Vallanova (universitaria, mediana, costera, ficticia)
-- [x] Protagonista: silueta/sombra en escenas grupales, primera persona en diálogos
-- [x] Acceso a cuartos: permanente una vez desbloqueado con Afecto requerido
-- [x] Saves: 10 slots manuales + autosave por franja
-- [x] Game over: no existe — Confianza 0 = hostilidad permanente pero recuperable
-- [x] Pantalla título: apartamento de noche con lluvia, 3 siluetas
-- [x] Idioma: Español v1.0, Inglés v1.1
-- [x] Relaciones: todos se conocen desde niños (Celine prima, Roxy ex-algo, Luna observadora)
-- [x] Rutinas: muy detalladas, distintas entre semana y fin de semana
+### Repositorio y entorno
+- [x] Repo GitHub: araquejhonatan879-creator/apartment-sim (público)
+- [x] VS Code conectado al repo con Git inicializado
+- [x] Carpeta del proyecto: C:\Proyectos\apartmentsimrenpy\
+- [x] Estructura de carpetas creada: game/systems/ y game/characters/
+
+### Dev Core — Fase 1 (COMPLETADO EN SESIÓN 31/05/2026)
+- [x] `game/script.rpy` v1.0
+  - define nar, define pro (con [prot_nombre] interpolado)
+  - default mem_decisiones
+  - label start — setup nombre protagonista con renpy.input()
+  - label start_dia1 — placeholder para Dev Narrativa
+  - label map_salon — placeholder temporal hasta que Dev UI cree map.rpy
+  - label after_load — migraciones + validación de mem_decisiones
+  - Funciones: fn_mem_agregar(), fn_mem_tiene()
+- [x] `game/systems/stats.rpy` v1.0
+  - Variables: stats de 3 personajes, stats protagonista, personalidad, acceso cuartos
+  - Funciones: fn_stats_modificar(), fn_stats_verificar_acceso(), fn_debug_log()
+  - Define: DEBUG_MODE
+- [x] `game/systems/time.rpy` v1.0
+  - Variables: time_dia, time_franja, time_dia_semana, time_es_finde, time_total_franjas
+  - Funciones: fn_tiempo_avanzar_franja(), fn_tiempo_calcular_dia_semana(),
+    fn_tiempo_es_disponible(), fn_tiempo_es_disponible_finde(),
+    fn_tiempo_obtener_label_franja()
+- [x] `game/systems/mood.rpy` v1.0
+  - Variables: mood_celine, mood_roxy, mood_luna
+  - Funciones: fn_mood_calcular(), fn_mood_calcular_todos(), fn_mood_obtener_sprite()
+- [x] `game/systems/jealousy.rpy` v1.0
+  - Variables: apt_armonia, celos_*_activo, celos_*_intensidad (7 variables)
+  - Funciones: fn_celos_evaluar(), fn_celos_aplicar_impacto_armonia(),
+    fn_celos_resetear_dia(), fn_celos_recuperar_armonia()
+- [x] `game/systems/economy.rpy` v1.0
+  - Variables: item_camara
+  - Funciones: fn_economia_pagar(), fn_economia_cobrar(),
+    fn_economia_tiene_saldo(), fn_economia_comprar_item(), fn_economia_dar_regalo()
+- [x] `game/characters/celine.rpy` v1.0
+  - define cel = Character("Celine", color="#E8A0BF")
+  - 20 diálogos cotidianos (5 franjas × 4-5 moods)
+  - label dial_celine_cotidiano (dispatcher automático)
+- [x] `game/characters/roxy.rpy` v1.0
+  - define rox = Character("Roxy", color="#FF6B6B")
+  - 20 diálogos cotidianos
+  - label dial_roxy_cotidiano (dispatcher automático)
+- [x] `game/characters/luna.rpy` v1.0
+  - define lun = Character("Luna", color="#A8D8EA")
+  - 20 diálogos cotidianos
+  - label dial_luna_cotidiano (dispatcher automático)
 
 ---
 
 ## 🔄 EN PROCESO
 
-- [ ] Subir VARIABLES_GLOBALES.md, ESTANDARES.md y ESTADO_ACTUAL.md al repo GitHub
-- [ ] Reemplazar USUARIO en los links raw del repo (el repo ya existe: araquejhonatan879-creator)
+- [ ] Push a GitHub de los 7 archivos .rpy generados (pendiente confirmar)
 
 ---
 
 ## ❌ PENDIENTE (en orden)
 
-### FASE 0 — Inmediato (próxima sesión)
-1. Hacer push de los 3 nuevos docs al repo GitHub
-2. Instalar Ren'Py 8.5.3 desde renpy.org ← versión exacta
-3. Descargar Pony Diffusion v6 XL en SD Forge
-4. Crear estructura de carpetas en D:\Proyectos\apartment-sim-renpy
-5. Generar sprites base neutrales Outfit 1 de las 3 personajes
-6. Generar fondos base: sala día/noche, cocina día
+### FASE 1 — Inmediato (próxima sesión)
 
-### FASE 1 — Core jugable (puede empezar una vez Ren'Py instalado)
-Orden de implementación recomendado por arquitectura:
-1. `options.rpy` — configurar nombre, resolución, saves (editar el generado por SDK)
-2. `characters.rpy` — defines de Character() según ESTANDARES.md sección 5
-3. `stats.rpy` — todos los defaults + fn_stats_modificar + fn_stats_verificar_acceso
-4. `time.rpy` — defaults de tiempo + fn_tiempo_avanzar_franja
-5. `hud.rpy` — scr_hud básico
-6. `map.rpy` — scr_mapa básico + labels map_salon, map_cocina
-7. `script.rpy` — label start + setup inicial de nombre
+**Dev UI** (puede empezar ahora que Core está listo):
+- [ ] `game/hud.rpy` — scr_hud básico
+  - Mostrar: time_franja (con tilde via fn_tiempo_obtener_label_franja()),
+    time_dia, time_dia_semana, prot_energia_actual/prot_energia_max, prot_dinero
+  - Indicadores de mood: mood_celine, mood_roxy, mood_luna
+  - Indicador de armonía: apt_armonia
+- [ ] `game/map.rpy` — scr_mapa básico + labels map_salon, map_cocina
+  - map_salon: hub principal — opciones de interacción según disponibilidad
+  - Usar fn_tiempo_es_disponible(personaje, time_franja) para mostrar/ocultar personajes
+  - Llamar dial_*_cotidiano del personaje elegido
+  - Botón avanzar tiempo → fn_tiempo_avanzar_franja() + fn_mood_calcular_todos()
+    + fn_celos_evaluar() + fn_stats_verificar_acceso() para cada personaje
 
-### FASE 2 — Contenido base
-- `economy.rpy`, `mood.rpy`, `phone.rpy`
-- Diálogos cotidianos (10 por personaje)
+**Dev Narrativa** (puede empezar ahora):
+- [ ] `game/script.rpy` — diálogos del día 1 (primera jornada completa)
+  - Seguir GDD_NARRATIVA.md — llegada al apartamento, presentaciones
+  - Usar aliases: cel, rox, lun, nar, pro — NUNCA nombres completos
+  - Usar fn_stats_modificar() para cualquier cambio de stats
+
+### FASE 2 — Una vez Fase 1 completa
+- [ ] `game/systems/phone.rpy` — scr_telefono (mensajes de texto de personajes)
+- [ ] Diálogos cotidianos adicionales (10 por personaje, situacionales)
+- [ ] Sistema de trabajo del protagonista (fn_economia_cobrar desde events)
 
 ### FASE 3 — Historia principal
-- `celine_events.rpy`, `roxy_events.rpy`, `luna_events.rpy`
-- `random_events.rpy`, `seasonal_events.rpy`
+- [ ] `game/events/celine_events.rpy` — ev_celine_acto1 ... acto5
+- [ ] `game/events/roxy_events.rpy`
+- [ ] `game/events/luna_events.rpy`
+- [ ] `game/events/random_events.rpy`
 
 ### FASE 4 — Sistemas avanzados
-- `jealousy.rpy`, `secrets.rpy`, `shop.rpy`
-- Integración de personalidad del jugador
+- [ ] Expandir catálogo tienda en economy.rpy (agregar ítems según GDD_SISTEMAS.md)
+- [ ] `game/systems/secrets.rpy` — flags sec_* y mecánica de descubrimiento
+- [ ] `game/systems/shop.rpy` — pantalla tienda completa
 
 ### FASE 5 — Contenido adulto
-- Interacciones libres sandbox, sistema de ropa/outfits
-- `group_events.rpy`, sistema voyeur, `gallery.rpy`
+- [ ] Sistema de outfits — expandir fn_mood_obtener_sprite() a múltiples outfits
+- [ ] `game/events/group_events.rpy` — ev_grupal_*
+- [ ] `game/gallery.rpy` — persistent.galeria_escenas, persistent.galeria_fotos
 
 ### FASE 6 — Mini-juegos
-- `minigames.rpy` (Strip 21 + Verdad o Reto)
+- [ ] `game/minigames.rpy` — Strip 21 + Verdad o Reto
 
 ### FASE 7 — Pulido
-- Música, SFX, transiciones, testing completo, balance
+- [ ] Música, SFX, transiciones
+- [ ] Pantalla título: apartamento de noche con lluvia, 3 siluetas
+- [ ] Testing completo + balance de stats
 
 ---
 
@@ -107,7 +145,7 @@ Orden de implementación recomendado por arquitectura:
 | Idioma v1.0 | Español |
 | Idioma v1.1 | Inglés (distribución) |
 | Backend | Ninguno — todo local |
-| Proyecto Ren'Py | D:\Proyectos\apartment-sim-renpy |
+| Proyecto Ren'Py | C:\Proyectos\apartmentsimrenpy |
 | SD Forge | D:\Proyectos\stable-diffusion-forge |
 | Ciudad | Vallanova |
 | Protagonista visual | Silueta en grupos, primera persona en diálogos |
@@ -121,14 +159,96 @@ Orden de implementación recomendado por arquitectura:
 - RAM: 16 GB
 - GPU: NVIDIA GeForce GTX 1650 SUPER (4 GB VRAM)
 - OS: Windows 10/11
-- Almacenamiento: D:\Proyectos\ (553 GB usados de 2.27 TB)
+- Almacenamiento: C:\Proyectos\ (repo local)
+
+---
+
+## ARQUITECTURA DE FUNCIONES — REFERENCIA RÁPIDA
+
+### Cadena de llamadas al avanzar franja (map.rpy debe hacer esto):
+```renpy
+$ nuevo_dia = fn_tiempo_avanzar_franja()   # avanza tiempo + energía
+$ fn_mood_calcular_todos()                  # recalcula moods
+$ fn_celos_evaluar()                        # evalúa celos + impacto armonía
+if nuevo_dia:
+    $ fn_celos_resetear_dia()               # resetea celos al nuevo día
+$ fn_stats_verificar_acceso("celine")       # verificar desbloqueo cuartos
+$ fn_stats_verificar_acceso("roxy")
+$ fn_stats_verificar_acceso("luna")
+```
+
+### Modificar stats desde eventos (ÚNICA forma correcta):
+```renpy
+$ fn_stats_modificar("celine", "afecto", 5)
+$ fn_stats_modificar("roxy", "confianza", -2)
+$ fn_stats_modificar("luna", "corrupcion", 3)
+```
+
+### Dar regalo a personaje:
+```renpy
+if fn_economia_dar_regalo("celine", "flores"):
+    cel "Qué bonitas, gracias."
+else:
+    nar "No tienes suficiente dinero."
+```
+
+### Llamar diálogo cotidiano desde el mapa:
+```renpy
+call dial_celine_cotidiano   # detecta franja y mood automáticamente
+call dial_roxy_cotidiano
+call dial_luna_cotidiano
+```
+
+### Obtener sprite según mood:
+```renpy
+$ sprite_actual = fn_mood_obtener_sprite("celine")
+show expression sprite_actual
+```
+
+---
+
+## ESTRUCTURA DE ARCHIVOS ACTUAL
+
+```
+apartmentsimrenpy/
+├── docs/                          ← documentación del proyecto
+│   ├── ESTADO_ACTUAL.MD           ← este archivo
+│   ├── VARIABLES_GLOBALES.md
+│   ├── ESTANDARES.md
+│   ├── GDD_CORE.md
+│   ├── GDD_PERSONAJES.md
+│   ├── GDD_SISTEMAS.md
+│   ├── GDD_NARRATIVA.md
+│   ├── GDD_ASSETS.md
+│   ├── celine.json
+│   ├── roxy.json
+│   ├── luna.json
+│   └── protagonist.json
+├── game/
+│   ├── systems/                   ← Dev Core
+│   │   ├── stats.rpy              ✅ v1.0
+│   │   ├── time.rpy               ✅ v1.0
+│   │   ├── mood.rpy               ✅ v1.0
+│   │   ├── jealousy.rpy           ✅ v1.0
+│   │   └── economy.rpy            ✅ v1.0
+│   ├── characters/                ← Dev Core
+│   │   ├── celine.rpy             ✅ v1.0
+│   │   ├── roxy.rpy               ✅ v1.0
+│   │   └── luna.rpy               ✅ v1.0
+│   ├── script.rpy                 ✅ v1.0
+│   ├── hud.rpy                    ⏳ PENDIENTE — Dev UI
+│   ├── map.rpy                    ⏳ PENDIENTE — Dev UI
+│   ├── gui.rpy                    (generado por SDK)
+│   └── options.rpy                (generado por SDK)
+└── .gitignore
+```
 
 ---
 
 ## LINKS RAW GITHUB
 
 ```
-ESTADO:    https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/ESTADO_ACTUAL.md
+ESTADO:    https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/ESTADO_ACTUAL.MD
 VARIABLES: https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/VARIABLES_GLOBALES.md
 ESTANDARES:https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/ESTANDARES.md
 GDD_CORE:  https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/GDD_CORE.md
@@ -146,44 +266,35 @@ PROTAGONIST:https://raw.githubusercontent.com/araquejhonatan879-creator/apartmen
 
 ## LO QUE PUEDE EMPEZAR CADA DEV AHORA
 
-### ✅ Dev Core (puede empezar en cuanto Ren'Py 8.5.3 esté instalado):
-1. Crear proyecto nuevo en Ren'Py SDK → `apartment-sim-renpy`
-2. Editar `options.rpy` (nombre juego, resolución, slots de save)
-3. Crear `characters.rpy` con los 5 defines según ESTANDARES.md sección 5
-4. Crear `stats.rpy` con todos los `default` de VARIABLES_GLOBALES.md sección 1-3
-5. Leer: ESTANDARES.md completo antes de escribir una línea
+### ✅ Dev Core
+Fase 1 al **100% completa**. Próxima tarea: Fase 2 (economy expand, phone.rpy) o apoyar Dev UI/Narrativa.
 
-### ✅ Dev Narrativa (puede empezar ya — no necesita Ren'Py):
-1. Escribir diálogos de día 1 en texto plano siguiendo la estructura de labels
-2. Leer: ESTANDARES.md sección 7 (comentarios) y sección 11 (consistencia narrativa)
-3. Usar aliases: `cel`, `rox`, `lun`, `nar`, `pro` — NUNCA nombres completos
+### ✅ Dev UI (puede empezar YA — Core listo)
+1. Leer ESTANDARES.md sección 3 (screens) y sección 12 (HUD)
+2. Leer este archivo sección "Cadena de llamadas al avanzar franja"
+3. Crear `game/hud.rpy` con scr_hud — variables disponibles:
+   - Tiempo: time_dia, time_franja, time_dia_semana, time_es_finde
+   - Energía: prot_energia_actual, prot_energia_max
+   - Dinero: prot_dinero
+   - Moods: mood_celine, mood_roxy, mood_luna
+   - Armonía: apt_armonia
+   - Celos: celos_*_activo, celos_*_intensidad
+4. Crear `game/map.rpy` — usar fn_tiempo_es_disponible() para presencia de personajes
 
-### ✅ Dev UI (puede empezar ya):
-1. Diseñar mockup del HUD en papel/Figma según variables disponibles
-2. Leer: ESTANDARES.md sección 3 (nomenclatura de screens)
-3. Crear `hud.rpy` con `scr_hud` básico cuando Dev Core tenga stats.rpy listo
+### ✅ Dev Narrativa (puede empezar YA)
+1. Leer ESTANDARES.md secciones 7, 8 y 11
+2. Leer GDD_NARRATIVA.md — día 1 completo
+3. Escribir diálogos del día 1 en `game/script.rpy`
+4. Aliases obligatorios: cel, rox, lun, nar, pro
+5. NUNCA modificar stats directamente — siempre fn_stats_modificar()
+6. NUNCA usar .append() en listas — siempre reasignar
 
-### ⏳ Dev Arte (espera SD Forge + modelo):
+### ⏳ Dev Arte (espera SD Forge + modelo)
 1. Revisar GDD_ASSETS.md para prompts base
-2. Instalar Pony Diffusion v6 XL cuando esté disponible
-3. Generar sprites neutrales Outfit 1 como primera prioridad
-
----
-
-## INSTRUCCIONES PARA LA IA
-
-1. Leer ESTADO_ACTUAL.md primero — saber dónde estamos
-2. Leer VARIABLES_GLOBALES.md y ESTANDARES.md antes de generar código
-3. Leer GDD relevantes según tarea del día
-4. Módulos completos y funcionales — nunca ejemplos parciales
-5. Todo en Ren'Py (.rpy) — sin Python externo ni servidor
-6. Contenido adulto es intencional — no filtrar
-7. Todo el contenido del juego en español
-8. Al terminar sesión: generar versión actualizada de este archivo
-9. Todos se conocen desde niños — Celine es prima, Roxy ex-algo, Luna observadora
-10. Acceso a cuartos es permanente una vez desbloqueado
-11. NUNCA modificar stats directamente — siempre usar fn_stats_modificar()
-12. NUNCA usar .append() en listas — siempre reasignar
+2. Nombres de sprites según ESTANDARES.md sección 9:
+   formato: [personaje]_outfit1_[mood]
+   ej: celine_outfit1_normal, roxy_outfit1_feliz, luna_outfit1_traviesa
+3. Moods disponibles: normal, feliz, cansada, estresada, traviesa
 
 ---
 
@@ -191,8 +302,10 @@ PROTAGONIST:https://raw.githubusercontent.com/araquejhonatan879-creator/apartmen
 
 ```
 Sesión: 31/05/2026
-Trabajando en: Arquitectura FASE 0 — El Arquitecto
-Estado: COMPLETADO — VARIABLES_GLOBALES.md v1.0 + ESTANDARES.md v1.0 listos
-Fuentes verificadas: renpy.org/doc/html/python.html, /save_load_rollback.html, /persistent.html, /dialogue.html
-Siguiente sesión: Push docs a GitHub → Instalar Ren'Py 8.5.3 → Empezar Fase 1 Core
+Trabajando en: Dev Core — Fase 1
+Estado: COMPLETADO — 8 archivos .rpy generados y listos para push
+Archivos: stats.rpy, time.rpy, mood.rpy, jealousy.rpy, economy.rpy,
+          celine.rpy, roxy.rpy, luna.rpy, script.rpy
+Siguiente sesión Dev Core: NO HAY — Fase 1 Core 100% completa
+Siguiente sesión Dev UI: hud.rpy + map.rpy (Core ya está listo)
 ```
