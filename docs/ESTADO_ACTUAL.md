@@ -1,9 +1,9 @@
 # APARTMENT SIM — ESTADO ACTUAL
-### Última actualización: 30/05/2026 — Sesión 3
+### Última actualización: 30/05/2026 — Sesión 4
 
 ---
 
-## FASE ACTUAL: FASE 1 — Core jugable (EN PROCESO)
+## FASE ACTUAL: FASE 2 — Contenido base (EN PROCESO)
 
 ---
 
@@ -30,13 +30,6 @@
 - [x] Pony Diffusion v6 XL en descarga (6.46 GB desde Civitai)
 - [x] VAE SDXL en descarga (319 MB desde Civitai)
 
-### Código — Fase 1 (EN PROCESO)
-- [x] game/systems/stats.rpy — Variables completas + 12 funciones Python
-- [x] game/systems/time.rpy — Franjas, días, moods, penalizaciones, ubicaciones
-- [x] game/screens/hud.rpy — HUD completo con barras, moods, armonía
-- [x] game/screens/map.rpy — Mapa navegable del apartamento
-- [x] game/script.rpy — Día 1 completo con narrativa + tutorial HUD
-
 ### Decisiones de diseño cerradas
 - [x] Ciudad: Vallanova
 - [x] Protagonista: silueta/sombra en escenas grupales, primera persona en diálogos
@@ -48,29 +41,44 @@
 - [x] Relaciones: todos se conocen desde niños
 - [x] Rutinas: detalladas, distintas entre semana y fin de semana
 
+### Código — FASE 1 COMPLETA
+- [x] game/systems/stats.rpy — Variables completas + 12 funciones Python. CORREGIDO: eliminada mc_energia huérfana; cambiar_stat_mc("energia_max") ahora sincroniza energia_actual
+- [x] game/systems/time.rpy — Franjas, días, moods, penalizaciones, ubicaciones. Incluye phone_generar_mensajes_dia() en nuevo_dia()
+- [x] game/screens/hud.rpy — CORREGIDO v4: color mood via bloque if/elif dentro del widget (sintaxis oficial Ren'Py). Range negativo protegido con max(0,...)
+- [x] game/screens/map.rpy — Mapa navegable. CORREGIDO: label dormir sincroniza energia_actual explícitamente tras nuevo_dia()
+- [x] game/script.rpy — Día 1 completo con narrativa + tutorial HUD
+- [x] game/characters.rpy
+
+### Código — FASE 2 (EN PROCESO)
+- [x] game/systems/economy.rpy — tienda completa
+- [x] game/systems/phone.rpy — mensajes completos, banco por personaje, respuestas con efecto en stats
+- [ ] Diálogos cotidianos (10 por personaje × 3 = 30 diálogos)
+
+### Verificado funcionando
+- [x] Juego corre sin errores hasta Día 2+
+- [x] HUD muestra día, franja, energía (círculos), dinero, stats y moods con color correcto
+- [x] Mapa navegable con habitaciones bloqueadas/desbloqueadas
+- [x] Sistema de tiempo, franjas y energía funcionando
+- [x] Teléfono funcional con mensajes por nivel de afecto
+
 ---
 
-## 🔄 EN PROCESO
+## 🔄 PENDIENTE INMEDIATO (próxima sesión)
 
-- [ ] Pony Diffusion descargando (dejar correr)
-- [ ] Prueba del juego corriendo en Ren'Py Launcher (primer boot)
+1. **Diálogos cotidianos** — 10 variaciones por personaje según mood y nivel de afecto
+   - `hablar_celine` → `dialogs_celine.rpy`
+   - `hablar_roxy`   → `dialogs_roxy.rpy`
+   - `hablar_luna`   → `dialogs_luna.rpy`
+   - Cada conversación: +2-5 Afecto / +1-3 Confianza según elección
+   - 3 respuestas del MC por diálogo (romántico / atrevido / respetuoso)
+   - Sumar arquetipo según la elección
 
 ---
 
 ## ❌ PENDIENTE (en orden)
 
-### FASE 1 — Inmediato (próxima sesión)
-1. **Probar el juego en Ren'Py Launcher** — verificar que arranca sin errores
-2. Resolver errores de sintaxis que aparezcan en el log
-3. Configurar Pony Diffusion en SD Forge (CLIP skip 2, VAE, --medvram)
-4. Generar sprites base neutrales × 3 personajes
-5. Generar fondos base: sala día/noche, cocina día, cuarto MC día/noche
-
-### FASE 2 — Contenido base
-- economy.rpy
-- mood.rpy (integrar con time.rpy)
-- phone.rpy
-- Diálogos cotidianos reales (10 por personaje, reemplaza placeholders en script.rpy)
+### FASE 2 — Inmediato
+- Diálogos cotidianos (10 por personaje)
 
 ### FASE 3 — Historia principal
 - celine_events.rpy (Actos 1-5)
@@ -82,7 +90,7 @@
 ### FASE 4 — Sistemas avanzados
 - jealousy.rpy
 - secrets.rpy
-- shop.rpy
+- shop.rpy (salidas)
 - Personalidad del jugador integrada
 
 ### FASE 5 — Contenido adulto
@@ -96,6 +104,7 @@
 - minigames.rpy (Strip 21 + Verdad o Reto)
 
 ### FASE 7 — Pulido
+- Arte (sprites + fondos)
 - Música y SFX
 - Transiciones
 - Testing completo
@@ -103,7 +112,7 @@
 
 ---
 
-## ARCHIVOS GENERADOS — SESIONES 1-3
+## ARCHIVOS GENERADOS — SESIONES 1-4
 
 ### game/systems/stats.rpy
 - 12 funciones Python: cambiar_stat, cambiar_stat_mc, cambiar_armonia,
@@ -113,6 +122,8 @@
 - Variables default: MC (nombre, encanto, energía, dinero), 3 personajes
   (afecto/confianza/corrupción/mood/secretos/cuarto), armonía, arquetipos,
   quests, galería, memoria de decisiones, celos
+- CORRECCIÓN s4: eliminada `default mc_energia = 6` (variable huérfana)
+- CORRECCIÓN s4: cambiar_stat_mc("energia_max") ahora sincroniza energia_actual
 
 ### game/systems/time.rpy
 - Franjas: mañana/tarde/noche/madrugada
@@ -124,20 +135,23 @@
 - ubicacion_probable() — rutinas por franja y fin de semana
 - esta_disponible() — disponibilidad reducida lunes-viernes tarde
 - autosave automático al inicio de cada día
+- phone_generar_mensajes_dia() integrado en nuevo_dia()
 
 ### game/screens/hud.rpy
 - Panel superior: día, nombre del día, franja, energía (círculos), dinero
 - Panel lateral derecho: stats de las 3 personajes con barras de color
-  (Celine #818cf8, Roxy #fb923c, Luna #c084fc), icono de mood
+  (Celine #818cf8, Roxy #fb923c, Luna #c084fc), icono de mood con color dinámico
 - Panel inferior izquierdo: barra de Armonía global
-- Estilos completos con colores del GDD
+- CORRECCIÓN s4: color mood via bloque if/elif DENTRO del widget text (sintaxis oficial)
+- CORRECCIÓN s4: range(max(0,...)) protege contra range negativo en energía
 
 ### game/screens/map.rpy
 - Mapa navegable del apartamento con todas las habitaciones
-- Sala, cocina, baño, cuarto MC, cuarto Celine, cuarto Roxy, cuarto Luna, balcón
-- Muestra qué personaje está en cada ubicación según rutinas
-- Botones de acción contextual por ubicación
-- Integrado con time.rpy para consumo de acciones
+- Sala, cocina, baño, cuarto MC, cuarto Celine, cuarto Roxy, cuarto Luna, balcón, afuera
+- Muestra qué personaje está en cada ubicación según rutinas con icono de mood
+- Pantallas de acciones contextuales por habitación (modal)
+- Botones rápidos: Teléfono, Guardar, Pasar tiempo
+- CORRECCIÓN s4: label dormir agrega `$ energia_actual = acciones_por_franja()` para sincronización inmediata
 
 ### game/script.rpy
 - label start: elección de nombre del MC
@@ -145,13 +159,33 @@
 - label tutorial_hud: 5 pantallas de tutorial de la interfaz
 - label fin_dia1: stats iniciales post-día-1 según GDD_NARRATIVA
 - label game_loop: bucle principal post-día-1
-- screen pantalla_inicio_dia: moods del día al despertar
-- screen tutorial_box: caja de tutorial reutilizable
-- screen notificacion_hud: notificaciones temporales
-- label nueva_franja: gestión de avance de franja/día
-- label interaccion_celine/roxy/luna: placeholders Fase 2
-- label accion_trabajar: ingresos $50-150
-- label accion_descansar: recupera +2 energía
+
+### game/characters.rpy
+- Definición de personajes Ren'Py (Character objects)
+
+### game/systems/economy.rpy
+- Tienda de regalos completa
+- Catálogo de items por personaje con efectos en stats
+- Sistema de compra con verificación de dinero
+
+### game/systems/phone.rpy
+- Pantalla de mensajes con 3 conversaciones (Celine/Roxy/Luna)
+- Banco de mensajes por nivel de afecto (bajo/medio/alto)
+- Opciones de respuesta con efecto: bien (+2 Afe), mal (-3 Afe), ignorar (-1 Afe)
+- phone_generar_mensajes_dia() llamado desde nuevo_dia()
+- Indicadores de mensajes sin leer con color por personaje
+
+---
+
+## LECCIONES TÉCNICAS REN'PY 8.5.3 — NO REPETIR ESTOS ERRORES
+
+| Problema | Lo que NO funciona | Solución correcta |
+|----------|-------------------|-------------------|
+| Color dinámico en `text` | `color "[funcion()]"` — Ren'Py evalúa esto como string literal hex | Bloque `if/elif` dentro del widget |
+| Estilo dinámico | `style "nombre_[variable]"` — no interpola en runtime | Bloque `if/elif` dentro del widget |
+| Range negativo en HUD | `range(a - b)` cuando b > a | `range(max(0, a - b))` |
+| Variable duplicada | `mc_energia` y `energia_actual` coexistiendo | Una sola variable: `energia_actual` en time.rpy |
+| Crash al cambiar día | `nuevo_dia()` resetea vars pero HUD renderiza antes de sincronizar | Agregar `$ energia_actual = acciones_por_franja()` después de `nuevo_dia()` |
 
 ---
 
@@ -161,13 +195,13 @@
 |----------|---------|
 | Motor | Ren'Py 8.5.3 |
 | Arte | Stable Diffusion Forge local |
-| Modelo SD | Pony Diffusion v6 XL (descargando) |
+| Modelo SD | Pony Diffusion v6 XL |
 | Idioma v1.0 | Español |
 | Idioma v1.1 | Inglés (distribución) |
 | Backend | Ninguno — todo local |
 | Proyecto Ren'Py | C:\Proyectos\apartmentsimrenpy |
 | SD Forge | D:\Proyectos\stable-diffusion-forge |
-| Docs GitHub | D:\Proyectos\apartment-sim |
+| Docs GitHub | apartment-sim repo /docs |
 | Ciudad | Vallanova |
 | Protagonista visual | Silueta en grupos, primera persona en diálogos |
 | Acceso cuartos | Permanente una vez desbloqueado |
@@ -180,14 +214,12 @@
 - RAM: 16 GB
 - GPU: NVIDIA GeForce GTX 1650 SUPER (4 GB VRAM)
 - OS: Windows 10/11
-- C: SSD — >60 GB libres (Ren'Py + proyecto aquí)
-- D: HDD 2.27 TB — SD Forge + modelos + docs aquí
+- C: SSD — Ren'Py + proyecto
+- D: HDD 2.27 TB — SD Forge + modelos + docs
 
 ---
 
 ## LINKS RAW GITHUB
-
-```
 ESTADO:     https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/ESTADO_ACTUAL.md
 GDD_CORE:   https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/GDD_CORE.md
 PERSONAJES: https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/GDD_PERSONAJES.md
@@ -198,7 +230,6 @@ CELINE:     https://raw.githubusercontent.com/araquejhonatan879-creator/apartmen
 ROXY:       https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/roxy.json
 LUNA:       https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/luna.json
 PROTAGONIST:https://raw.githubusercontent.com/araquejhonatan879-creator/apartment-sim/main/docs/protagonist.json
-```
 
 ---
 
@@ -206,35 +237,30 @@ PROTAGONIST:https://raw.githubusercontent.com/araquejhonatan879-creator/apartmen
 
 1. Leer este archivo primero — saber dónde estamos
 2. Leer GDD relevantes según tarea del día
-3. Módulos completos y funcionales — nunca ejemplos parciales
-4. Todo en Ren'Py (.rpy) — sin Python externo ni servidor
-5. Contenido adulto es intencional — no filtrar
-6. Todo el contenido del juego en español
-7. Al terminar sesión: generar versión actualizada de este archivo
-8. Cada 10 mensajes: checkpoint corto con estado del trabajo en curso
-9. Todos se conocen desde niños — Celine es prima, Roxy ex-algo, Luna observadora
-10. Acceso a cuartos es permanente una vez desbloqueado
-11. No modificar código ya funcional salvo que el usuario lo pida
+3. **ANTES DE GENERAR CUALQUIER CÓDIGO REN'PY:**
+   - Buscar en https://www.renpy.org/doc/html/ la sintaxis exacta que se va a usar
+   - Verificar especialmente: propiedades de screen widgets, interpolación, estilos dinámicos
+   - NO asumir que `[...]` funciona en propiedades de widgets — solo funciona en strings de contenido
+   - Color dinámico: siempre usar bloque `if/elif` DENTRO del widget, nunca inline
+   - Si hay duda sobre cualquier sintaxis: buscar primero, generar después
+4. Módulos completos y funcionales — nunca ejemplos parciales
+5. Todo en Ren'Py (.rpy) — sin Python externo ni servidor
+6. Contenido adulto es intencional — no filtrar
+7. Todo el contenido del juego en español
+8. Al terminar sesión: generar versión actualizada de este archivo (fusionar con la anterior, no reemplazar)
+9. Checkpoint cada 10 mensajes
+10. Todos se conocen desde niños — Celine es prima, Roxy ex-algo, Luna observadora
+11. Acceso a cuartos es permanente una vez desbloqueado
+12. No modificar código ya funcional salvo que el usuario lo pida explícitamente
 
 ---
 
-## CHECKPOINT
-
-```
-Sesión: 30/05/2026 — Sesión 3
-Fase 1 completada al 100%: stats, time, hud, map, script
-
-Archivos listos:
-  game/systems/stats.rpy     ✅
-  game/systems/time.rpy      ✅
-  game/screens/hud.rpy       ✅
-  game/screens/map.rpy       ✅
-  game/script.rpy            ✅
-
-Siguiente sesión:
-  1. Leer ESTADO_ACTUAL.md
-  2. Probar el juego en Ren'Py Launcher y resolver errores
-  3. Si Pony Diffusion terminó: configurar SD Forge
-  4. Generar sprites base neutrales (Fase 1 → arte)
-  5. Iniciar Fase 2: economy.rpy
-```
+## CHECKPOINT — Sesión 4
+Fecha: 30/05/2026
+Trabajando en: Fixes HUD + stats + map — estabilización Fase 2
+Estado: COMPLETADO — juego corre sin errores hasta Día 2+
+Archivos modificados esta sesión:
+game/screens/hud.rpy  → v4 definitivo, color mood con if/elif en bloque
+game/systems/stats.rpy → eliminada mc_energia, sincronización energia_max
+game/screens/map.rpy   → label dormir con sincronización explícita
+Próxima sesión: Diálogos cotidianos × 3 personajes (Fase 2)

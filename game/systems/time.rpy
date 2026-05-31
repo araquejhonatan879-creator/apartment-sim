@@ -68,6 +68,8 @@ init python:
         # Generar estado de ánimo del día para cada personaje
         generar_moods()
 
+        phone_generar_mensajes_dia()
+
         # Penalización por ignorar personajes (GDD S01)
         aplicar_penalizacion_ignorar()
 
