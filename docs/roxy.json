@@ -1,0 +1,244 @@
+{
+  "id": "roxy",
+  "name": "Roxy",
+  "archetype": "La Caótica",
+  "age": 21,
+
+  "appearance": {
+    "height_cm": 165,
+    "body_type": "Atlética-curvilínea, dinámica, tonificada",
+    "bust": "Copa D, redondo y firme, proyectado hacia adelante",
+    "measurements": "88-62-92",
+    "skin": "Morena suave, beige dorado, bronceado ligero cálido",
+    "hair": {
+      "color": "Naranja-rojo vibrante con degradado dorado en las puntas",
+      "length": "Hasta los hombros",
+      "style": "Dos coletas altas asimétricas o coleta alta deshecha. Flequillo irregular que cae sobre la frente."
+    },
+    "eyes": {
+      "color": "Ámbar-dorado brillante con motas amarillas",
+      "shape": "Grandes y redondos, muy expresivos",
+      "expression": "Abiertos, traviesos, cejas gruesas en constante movimiento"
+    },
+    "marks": [
+      "Pecas suaves en nariz, mejillas y hombros",
+      "Lunar en la cadera derecha cerca del hueso",
+      "Lunar en la cara interna del muslo izquierdo"
+    ],
+    "piercings": [
+      "Dos piercings en cada oreja (lóbulo y hélix)",
+      "Piercing en la lengua, barra pequeña plateada"
+    ],
+    "accessories": ["Pulseras gruesas coloridas", "Tobilleras"],
+    "tattoos": [
+      "Sol estilizado pequeño (6 cm) en la nuca",
+      "Tribal curvo en el costado izquierdo de las costillas"
+    ],
+    "usual_clothing": {
+      "outside": "Crop tops ajustados, tops deportivos, faldas cortas plisadas con shorts de ciclista, chaquetas bomber abiertas, ligas en muslos, zapatillas o botas cortas.",
+      "at_home_day": "Camiseta oversize cortada, shorts deportivos. Siempre descalza en casa.",
+      "at_home_night": "Top de tirantes y shorts cortos. Puerta del cuarto siempre abierta.",
+      "corruption_50plus": "Top sin sujetador, shorts muy cortos.",
+      "corruption_80plus": "Lencería colorida o simplemente lo mínimo, sin vergüenza."
+    },
+    "color_palette": ["Rojo cereza", "Naranja intenso", "Amarillo mostaza", "Blanco roto", "Negro"]
+  },
+
+  "personality": {
+    "type": "Espontánea impulsiva sin filtros",
+    "traits": ["Impredecible", "Divertida", "Directa", "Impulsiva", "Energética", "Sin vergüenza"],
+    "communication_style": "Habla sin pensar, dice lo que siente, hace preguntas incómodas con una sonrisa. Mucho contacto físico casual — toca el brazo, empuja el hombro, abraza sin avisar.",
+    "when_neglected": "Se enoja activamente y no lo oculta. Busca atención de forma obvia. Si la ignoras varios días: baja de Afecto rápido y hay que reconquistarla con esfuerzo real.",
+    "when_comfortable": "Completamente desinhibida. Propone cualquier cosa. Dice lo que nadie más se atreve a decir en voz alta.",
+    "awareness_of_feelings": "Lo insinúa con humor o bromas veladas. Si la presionas lo niega riéndose. En el fondo sabe exactamente lo que siente — le da miedo quedarse quieta con eso.",
+    "defense_mechanism": "El humor. Si todo es un chiste, nada puede doler de verdad. Lleva años así."
+  },
+
+  "backstory": {
+    "history_with_player": "Se conocen desde niños. Hubo algo romántico entre ellos que no tuvo nombre oficial y terminó mal — por razones que ninguno explica bien. Ella decidió que seguirían siendo amigos y actuó como si esa decisión lo resolvía todo. Él no tuvo voz en eso. Ahora viven juntos.",
+    "history_childhood": "Del mismo grupo desde pequeños. Siempre fue la más ruidosa, la que proponía los planes absurdos, la que arrastraba a todos.",
+    "role_in_apartment": "Desordena todo, trae gente sin avisar, propone planes absurdos a las 2am. El caos tiene su nombre. Paradójicamente es la que más une al grupo.",
+    "career": "Estudiante de Diseño Gráfico, segundo año. Va a clase cuando quiere. Tiene talento real pero lo desperdicia en proyectos personales que no entrega.",
+    "family_background": "Familia numerosa y ruidosa. Creció aprendiendo que si no gritabas no existías. El movimiento constante es su estado natural.",
+    "secret_deep": "Le asusta quedarse quieta porque cuando lo hace piensa demasiado. El caos es intencional."
+  },
+
+  "relationships": {
+    "with_celine": "La molesta a propósito porque le divierte verla reaccionar. En el fondo la admira — Celine tiene la disciplina que Roxy nunca tendrá. Se conocen desde niñas, hay historia real debajo del caos.",
+    "with_luna": "Le parece fascinante e inquietante a partes iguales. Intenta hacerla reír como misión personal. Luna es lo que Roxy nunca podría ser — y eso la intriga.",
+    "with_player": "Actúa como si todo estuviera bien entre los dos. No lo está. Pero es más fácil así. Tiene bocetos suyos que no enseña a nadie."
+  },
+
+  "routine": {
+    "weekday": {
+      "morning_6_9": {
+        "location": "Su cuarto (dormida hasta las 8:30 mínimo)",
+        "activity": "No existe para ella antes de las 8:30. Si tiene clase a las 8 — problema de Roxy del futuro.",
+        "mood": "Zombie. No hablar con ella.",
+        "availability": "Nula antes de las 9."
+      },
+      "morning_9_12": {
+        "location": "Cocina o sala, luego universidad (si tiene clase)",
+        "activity": "Desayuno caótico — lo que encuentre, de pie, con música. Sale corriendo si tiene clase. Si no: sigue en casa.",
+        "mood": "Activa de golpe, como si nunca hubiera estado dormida.",
+        "availability": "Alta si está en casa. Cero si fue a clase."
+      },
+      "afternoon_12_18": {
+        "location": "Sala, su cuarto, o desaparecida sin avisar",
+        "activity": "Dibuja, ve series, sale con gente sin decir adónde. Variable total.",
+        "mood": "Energética o completamente ausente. No hay término medio.",
+        "availability": "Variable. Si está: muy accesible. Si salió: solo por mensaje."
+      },
+      "evening_18_22": {
+        "location": "Cocina o sala",
+        "activity": "Cena improvisada — algo fácil, ruidosa mientras cocina. Propone planes para después.",
+        "mood": "En su punto. Mejor momento del día para hablar.",
+        "availability": "Alta. Habla de cualquier cosa."
+      },
+      "night_22_00": {
+        "location": "Sala o su cuarto",
+        "activity": "Series, dibujar, música alta con auriculares, mensajes caóticos.",
+        "mood": "Pico de energía nocturno. Propone juegos, apuestas, conversaciones raras.",
+        "availability": "Muy alta. Más honesta de noche."
+      },
+      "late_night_00_06": {
+        "location": "Sala principalmente",
+        "activity": "Rara vez duerme antes de las 2am. Puede estar dibujando, viendo algo, o simplemente haciendo ruido.",
+        "mood": "Más tranquila que de costumbre. Momentos de honestidad inesperada.",
+        "availability": "Disponible. Esta es la Roxy real, sin actuación."
+      }
+    },
+    "weekend": {
+      "morning": {
+        "location": "Su cuarto hasta las 11",
+        "activity": "Duerme hasta tarde sin culpa. Si se levanta antes: desayuno enorme y música.",
+        "mood": "Relajada, sin prisa.",
+        "availability": "Baja hasta las 11. Alta después."
+      },
+      "afternoon": {
+        "location": "Sala, afuera con amigos, o su cuarto dibujando",
+        "activity": "Planes sociales, salidas, o maratón de algo en casa. Nunca quieta.",
+        "mood": "Máxima energía del fin de semana.",
+        "availability": "Variable pero generalmente accesible."
+      },
+      "night": {
+        "location": "Sala o fuera",
+        "activity": "Fin de semana = fiesta o plan. Propone salidas, invita gente, organiza algo.",
+        "mood": "Imparable.",
+        "availability": "Alta si está en casa. Puede proponer salida grupal."
+      }
+    },
+    "bathroom_schedule": "Ducha rápida, 10-15 minutos, horario impredecible. Puede ser a las 10am o a las 11pm.",
+    "shopping": "Compra online en el sofá a las 2am. Paquetes llegan sin que nadie sepa qué pidió.",
+    "cooking": "Improvisa siempre. Resultado variable entre 'sorprendentemente bueno' y 'nadie pregunta qué es esto'."
+  },
+
+  "meters": {
+    "love": {
+      "initial": 25,
+      "speed": "rápido",
+      "notes": "Sube con atención directa, juegos, humor, sorprenderla. Baja rápido si la ignoras 2+ días seguidos."
+    },
+    "corruption": {
+      "initial": 15,
+      "speed": "rápido",
+      "notes": "Cede antes que las otras. No le da vergüenza — solo necesita confianza mínima y que no sea aburrido."
+    }
+  },
+
+  "corruption_thresholds": {
+    "0-20": "Juega y coquetea pero para antes de que sea serio. Lo convierte en broma.",
+    "21-45": "Contacto físico directo sin pensarlo. Besos impulsivos que 'no cuentan' — ella lo decide.",
+    "46-70": "Escenas íntimas iniciadas por ella, con comentarios graciosos en medio. Su forma de no perder el control.",
+    "71-90": "Completamente desinhibida. Sin chistes. Propone ella misma lo que sigue.",
+    "91-100": "Sin límites. Lo vive como una aventura. Sonríe diferente después."
+  },
+
+  "typical_phrases": [
+    "¿Qué? Solo estaba preguntando.",
+    "Venga, no seas aburrido.",
+    "Te apuesto lo que quieras.",
+    "Eso no lo dijiste en serio, ¿verdad? ...¿Lo dijiste en serio?",
+    "Oye, ¿tú y yo somos raros o todo el mundo es así?",
+    "No es para tanto. Yo lo hago todo el tiempo.",
+    "...Vale, puede que eso haya sido mala idea.",
+    "¿Sigues pensando en lo de antes? Porque yo no. Para nada.",
+    "No me ignores o lo vas a lamentar.",
+    "Era broma. Más o menos."
+  ],
+
+  "text_message_style": {
+    "tone": "Memes, audios de voz, strings de emojis sin contexto, mensajes a las 3am sin explicación.",
+    "examples": [
+      "oye (sin continuación durante 20 minutos)",
+      "🦆🔥💀 (no hay explicación disponible)",
+      "audio de 43 segundos riéndose de algo (te tenías que haber quedado)",
+      "son las 3am y acabo de pensar algo importante (nunca dice qué es)",
+      "ignórame (enviado a las 2:17am)"
+    ],
+    "corruption_50plus": "Mensajes más directos, menos emojis, más tarde. Algunos sin broma encima.",
+    "frequency_by_love": {
+      "0-30": "2-3 mensajes por día, superficiales",
+      "31-60": "4-5 mensajes, algunos reales",
+      "61-100": "Mensajes constantes a cualquier hora"
+    }
+  },
+
+  "secrets": [
+    {
+      "id": 1,
+      "description": "Tiene bocetos del protagonista en su sketchbook — muchos, de distintas épocas. Algunos recientes.",
+      "how_to_find": "Ver el sketchbook cuando lo deja en sala. Trigger del Acto 1.",
+      "effect_discover": "+10 Confianza + desbloquea diálogos sobre el pasado"
+    },
+    {
+      "id": 2,
+      "description": "Guardó fotos de los dos de cuando eran algo. Dice que las iba a borrar.",
+      "how_to_find": "Cajón de su cuarto con Afecto >40.",
+      "effect_discover": "+10 Confianza. Si lo mencionas con cuidado: +15 Afecto adicional."
+    },
+    {
+      "id": 3,
+      "description": "Le habla a Luna de ti. Luna no cuenta nada pero escucha todo.",
+      "how_to_find": "Escuchar conversación entre ellas, noche, semana 2+.",
+      "effect_discover": "+10 Confianza con Roxy. Desbloquea diálogo especial con Luna sobre Roxy."
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "roxy_q1",
+      "name": "El sketchbook",
+      "trigger": "Afecto >25",
+      "description": "Te muestra sus diseños por primera vez. Hay un boceto tuyo. Reacción del jugador define el rumbo.",
+      "reward": "+15 Afecto. Desbloquea secreto 1 y diálogos sobre arte."
+    },
+    {
+      "id": "roxy_q2",
+      "name": "La exposición",
+      "trigger": "Afecto >55",
+      "description": "Tiene exposición en la universidad. Si vas: evento especial. Si no vas: consecuencia permanente.",
+      "reward_go": "+20 Afecto +10 Confianza",
+      "reward_skip": "-15 Afecto permanente. Lo menciona semanas después."
+    },
+    {
+      "id": "roxy_q3",
+      "name": "La noche que llora",
+      "trigger": "Confianza >60",
+      "description": "La encuentras llorando. Primera vez que baja la guardia completamente. Decisión del jugador tiene consecuencias con ella y con Luna.",
+      "reward": "Variable. Opción correcta: +20 Confianza +15 Afecto."
+    }
+  ],
+
+  "stable_diffusion": {
+    "base_prompt": "anime girl, orange red hair with golden highlights at tips, twin tails asymmetric, amber golden eyes with yellow specks, athletic curvy figure, medium large bust, tan warm golden skin, freckles on nose cheeks and shoulders, energetic expression, small silver tongue piercing",
+    "style_tags": "high quality, detailed, 2d anime style, visual novel sprite, clean lineart",
+    "negative_prompt": "3d, realistic, deformed, bad anatomy, blurry, extra limbs, bad hands",
+    "outfit_prompts": {
+      "outfit_1": "fitted crop top, plaid mini skirt, bike shorts underneath, bomber jacket open, sneakers",
+      "outfit_2": "oversized cut tshirt, athletic shorts, barefoot, casual home",
+      "outfit_3": "thin tank top no bra, very short shorts, relaxed night",
+      "outfit_4": "colorful lingerie, playful expression, confident"
+    }
+  }
+}

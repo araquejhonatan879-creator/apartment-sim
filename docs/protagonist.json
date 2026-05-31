@@ -1,0 +1,72 @@
+{
+  "id": "protagonist",
+  "name": "Elegible por el jugador (default: Kai)",
+  "archetype": "El Neutral",
+  "age": 22,
+
+  "appearance": {
+    "visual_style": "Silueta/sombra en escenas grupales. Sin sprite definido en conversaciones — primera persona.",
+    "notes": "El jugador se proyecta en él. No se define físico, tono de piel, ni rasgos. Solo silueta oscura cuando es necesaria su presencia visual en escena grupal."
+  },
+
+  "backstory": {
+    "origin": "Se mudó a Vallanova para estudiar Ingeniería de Sistemas en la universidad. Primer año. Necesitaba cuarto y Celine (su prima) tenía uno disponible.",
+    "history_with_celine": "Primos. Se conocen de toda la vida. Algo quedó sin resolver entre los dos — un momento, una conversación — que ninguno nombra. Ella lo invitó a vivir ahí porque Roxy insistió y no pudo negarse sin dar explicaciones.",
+    "history_with_roxy": "Se conocen desde niños. Hubo algo romántico que no tuvo nombre oficial y terminó mal. Ella actúa como si nada. Él sabe que no es verdad.",
+    "history_with_luna": "Se conocen desde niños también, del mismo grupo. Nunca fueron cercanos pero ella siempre lo observó diferente. Desde el bachillerato. Nadie sabe por qué. Ni ella lo explica.",
+    "reason_to_move": "Universidad — busca cuarto, ellas tenían uno libre. Simple en la superficie."
+  },
+
+  "personality": {
+    "type": "Neutral — definido por las elecciones del jugador",
+    "archetypes": {
+      "romantico": "Gestos dulces, paciencia, escuchar activamente, recordar detalles. Luna lo prefiere.",
+      "atrevido": "Directo, toma iniciativa, propone cosas, no espera permiso explícito. Roxy lo prefiere.",
+      "respetuoso": "Nunca presiona, espera señales claras, pide antes de actuar. Celine lo prefiere."
+    },
+    "notes": "Los puntos de personalidad se acumulan con cada elección. El arquetipo dominante de la semana actual afecta los modificadores de Afecto."
+  },
+
+  "stats": {
+    "encanto": {
+      "initial": 10,
+      "max": 100,
+      "how_to_increase": ["Leer libros (+2 por libro)", "Conversaciones exitosas (+1)", "Quests completadas con resultado óptimo (+3-5)", "Salidas completadas (+2)"],
+      "effects": {
+        "0-25": "Diálogos básicos sin opciones especiales",
+        "26-50": "+1 opción especial en conversaciones importantes",
+        "51-75": "+2 opciones. Probabilidad de eventos espontáneos positivos +10%",
+        "76-100": "+3 opciones. Voyeur sube a 85% éxito. Algunos personajes inician conversación primero."
+      }
+    },
+    "energia_maxima": {
+      "initial": 6,
+      "max": 10,
+      "how_to_increase": "Ejercicio en mañana 5 días consecutivos = +1",
+      "notes": "Acciones disponibles por franja horaria"
+    },
+    "dinero": {
+      "initial": 500,
+      "max": "Sin límite",
+      "currency": "Moneda genérica (símbolo $)",
+      "how_to_earn": ["Trabajar: 1 acción = $50-150 aleatorio", "Quests completadas: $50-300", "Eventos especiales: variable"]
+    }
+  },
+
+  "relationships": {
+    "with_celine": "Prima. Historia sin resolver. Tensión constante desde el día 1.",
+    "with_roxy": "Amiga de infancia / ex-algo sin nombre. Terminó mal. Ella actúa como si nada.",
+    "with_luna": "Conocida del grupo desde niños. Nunca fueron cercanos pero algo hay. Siempre la observó diferente."
+  },
+
+  "save_system": {
+    "manual_slots": 10,
+    "autosave": "Por franja horaria — sobreescribe el autosave anterior",
+    "notes": "El jugador puede guardar en cualquier momento desde el menú"
+  },
+
+  "game_over": {
+    "exists": false,
+    "notes": "Sin game over. Si Confianza llega a 0 con un personaje, se vuelve hostil/fría de forma permanente pero sigue en el juego. El jugador puede intentar recuperar la relación aunque es muy difícil."
+  }
+}

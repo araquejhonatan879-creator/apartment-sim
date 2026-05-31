@@ -1,0 +1,245 @@
+{
+  "id": "luna",
+  "name": "Luna",
+  "archetype": "La Misteriosa",
+  "age": 22,
+
+  "appearance": {
+    "height_cm": 168,
+    "body_type": "Delgada, estilizada, frágil, piernas largas",
+    "bust": "Copa B, pequeño, redondo y firme",
+    "measurements": "78-55-82",
+    "skin": "Blanco pálido casi translúcido, venas azuladas sutiles visibles en pecho, cuello y muslos",
+    "hair": {
+      "color": "Plateado-lavanda claro con mechones blancos brillantes",
+      "length": "Hasta la cintura",
+      "style": "Flequillo largo asimétrico que tapa el ojo derecho. Mechón largo frontal que cae sobre el pecho."
+    },
+    "eyes": {
+      "color": "Violeta-púrpura profundo con brillo sutil",
+      "shape": "Almendrados, downturned (caídos en las esquinas)",
+      "expression": "Distante, melancólica y penetrante. Pestañas largas y densas."
+    },
+    "marks": [
+      "Lunar pequeño bajo el labio inferior",
+      "Constelación de tres lunares en la clavícula izquierda"
+    ],
+    "piercings": [
+      "Pendientes largos y delicados en forma de luna o lágrima",
+      "Piercing discreto en el septum, pequeño aro plateado"
+    ],
+    "accessories": [
+      "Cadenas finas plateadas alrededor de la cintura",
+      "Cadenas finas plateadas en tobillos"
+    ],
+    "tattoos": [
+      "Constelaciones y fases lunares en toda la espalda (omóplatos hasta zona lumbar)",
+      "Luna creciente pequeña en la muñeca interna derecha"
+    ],
+    "usual_clothing": {
+      "outside": "Vestidos largos con transparencias y aberturas altas, mangas campana, corsés sutiles, chaquetas oversize, botas altas hasta la rodilla.",
+      "at_home_day": "Vestido largo suave o conjunto de tela fluida. Siempre algo largo, nunca ropa de deporte.",
+      "at_home_night": "Camisón largo de tela fina, casi transparente en la luz. Sin bata.",
+      "corruption_50plus": "Camisón más corto, tela más fina. Se mueve diferente cuando sabe que la miras.",
+      "corruption_80plus": "Lencería delicada, encaje fino, colores oscuros o blancos."
+    },
+    "color_palette": ["Negro profundo", "Púrpura oscuro", "Borgoña", "Gris plateado", "Lavanda"]
+  },
+
+  "personality": {
+    "type": "Callada observadora de peso",
+    "traits": ["Silenciosa", "Perceptiva", "Enigmática", "Deliberada", "Impredecible en sus reacciones"],
+    "communication_style": "Habla poco. Cuando lo hace, cada palabra fue elegida. Nunca rellena el silencio con palabras vacías. Observa más de lo que parece — nota cosas que nadie más nota.",
+    "when_neglected": "No hace drama. Simplemente se aleja más. El Afecto baja solo, despacio, sin aviso. Para cuando lo notas ya bajó bastante.",
+    "when_comfortable": "Una frase al momento menos esperado que cambia el tono de todo. A veces solo se sienta cerca sin decir nada — para Luna eso es mucho.",
+    "awareness_of_feelings": "Siente todo con una intensidad que asustaría a cualquiera. Por eso no habla. Por eso escribe. Lo tiene todo en el cuaderno.",
+    "defense_mechanism": "El silencio. Si no lo dices no existe. Lleva años construyendo esa lógica."
+  },
+
+  "backstory": {
+    "history_with_player": "Se conocen desde niños, del mismo grupo. Nunca fueron cercanos — ella nunca fue cercana a nadie — pero siempre lo observó diferente. Desde el bachillerato. Sin explicación. Nadie lo sabe. Ni ella lo explica.",
+    "history_childhood": "Siempre estuvo en el grupo pero nunca del todo dentro. La que escuchaba todo y decía nada. Ya entonces tenía el cuaderno.",
+    "role_in_apartment": "Prepara té o café para todas sin que nadie se lo pida. Nota cuando algo está mal antes de que se diga. Guarda los secretos de todas. El apartamento funciona mejor cuando ella está, aunque nadie sabe exactamente por qué.",
+    "career": "Estudiante de Literatura, cuarto año. Lee más libros de los que exige la carrera. Escribe, aunque no lo muestra a nadie. Nunca.",
+    "family_background": "Poco se sabe. No habla de su familia. Algo pasó que la hizo así — no es tristeza, es distancia. Aprendida, construida, mantenida.",
+    "secret_deep": "El cuaderno negro contiene todo lo que nunca dirá en voz alta. Incluyendo páginas enteras sobre el protagonista."
+  },
+
+  "relationships": {
+    "with_celine": "Respeto mutuo profundo y silencioso. Se entienden sin hablar. Son las más parecidas aunque parezcan opuestas — las dos controlan lo que muestran, las dos sienten más de lo que dicen.",
+    "with_roxy": "La encuentra agotadora pero también necesaria. Roxy es lo que Luna nunca podría ser. Le confía cosas que no le dice a nadie — Luna las guarda todas sin comentarlas.",
+    "with_player": "Algo pasó. No está definido. Eso es exactamente el punto — la ambigüedad es intencional y es lo que hace la relación interesante."
+  },
+
+  "routine": {
+    "weekday": {
+      "morning_6_9": {
+        "location": "Cocina",
+        "activity": "Se levanta temprano sin alarma. Prepara té para ella y deja café hecho para las demás sin decirlo. Silencio absoluto.",
+        "mood": "Tranquila, presente pero en su mundo.",
+        "availability": "Presente pero silenciosa. Responde si le hablas, no inicia."
+      },
+      "morning_9_12": {
+        "location": "Universidad o su cuarto",
+        "activity": "Clases de Literatura. Asiste a todas, siempre. Si no tiene clase: leyendo en su cuarto.",
+        "mood": "Concentrada.",
+        "availability": "Baja si está en clase. Media si está en su cuarto — no le molesta compañía silenciosa."
+      },
+      "afternoon_12_18": {
+        "location": "Su cuarto o sala",
+        "activity": "Lectura, escritura en el cuaderno, trabajo de la carrera. A veces se queda en la sala si hay luz buena.",
+        "mood": "Absorta. No le molesta que estés cerca si no intentas forzar conversación.",
+        "availability": "Media. Accesible si respetas su ritmo."
+      },
+      "evening_18_22": {
+        "location": "Cocina o sala",
+        "activity": "Cena ligera, tranquila. Come despacio. A veces cocina algo elaborado en silencio.",
+        "mood": "Más presente que en la tarde. Empieza a activarse hacia la noche.",
+        "availability": "Media-alta. Mejor que la tarde."
+      },
+      "night_22_00": {
+        "location": "Sala, su cuarto o balcón",
+        "activity": "Lectura nocturna, escritura, balcón si hay luna visible. La noche la activa sutilmente.",
+        "mood": "Más presente. Habla más de noche que en cualquier otro momento.",
+        "availability": "Alta. Mejor momento del día para hablar con ella."
+      },
+      "late_night_00_06": {
+        "location": "Su cuarto o cocina",
+        "activity": "A veces no duerme. La encuentras con un libro o mirando por la ventana. Té frío que olvidó tomar.",
+        "mood": "Los momentos más honestos ocurren aquí.",
+        "availability": "Si está despierta: disponible. Es cuando más habla."
+      }
+    },
+    "weekend": {
+      "morning": {
+        "location": "Cocina o su cuarto",
+        "activity": "Igual que entre semana — se levanta temprano. El fin de semana no cambia mucho su rutina.",
+        "mood": "Tranquila.",
+        "availability": "Similar a entre semana."
+      },
+      "afternoon": {
+        "location": "Sala, su cuarto, o sale sola",
+        "activity": "A veces sale sola a librerías o parques sin decir adónde. Vuelve con un libro nuevo siempre.",
+        "mood": "Variable. Si salió: vuelve más tranquila.",
+        "availability": "Baja si salió. Alta si está en casa."
+      },
+      "night": {
+        "location": "Sala o balcón",
+        "activity": "Fines de semana participa más en la sala. Si hay evento grupal: está presente aunque en silencio.",
+        "mood": "Más abierta que entre semana.",
+        "availability": "Alta. Los eventos grupales más interesantes incluyen a Luna de noche."
+      }
+    },
+    "bathroom_schedule": "Ducha larga por las noches, entre 10pm y 11pm. Metódica, sin prisa. Por las mañanas solo se lava la cara.",
+    "shopping": "Sale sola a librerías. Siempre vuelve con algo. Nunca compra ropa online — elige en persona aunque tarde.",
+    "cooking": "Cocina bien cuando cocina. Platos simples pero precisos. Nunca improvisa — sigue recetas mentalmente."
+  },
+
+  "meters": {
+    "love": {
+      "initial": 20,
+      "speed": "medio",
+      "notes": "Sube con presencia tranquila, no forzar conversación, escucharla cuando habla, respetar su silencio. Baja despacio pero constante si la ignoras."
+    },
+    "corruption": {
+      "initial": 10,
+      "speed": "impredecible",
+      "notes": "Puede sorprender. A veces sube de golpe en un momento inesperado. A veces no sube en semanas. No responde a presión — solo a momentos reales."
+    }
+  },
+
+  "corruption_thresholds": {
+    "0-20": "Ignora o evita cualquier insinuación sin decir nada. No hay rechazo verbal — simplemente no registra.",
+    "21-45": "Permite cercanía física sin apartarse. Contacto mínimo aceptado en silencio. No lo busca pero no lo evita.",
+    "46-70": "Una acción inesperada que nadie vio venir. Sin explicación. Puede no repetirse pronto.",
+    "71-90": "Se entrega en silencio absoluto. Ojos abiertos. Sin palabras. Solo presencia.",
+    "91-100": "Dice en voz alta todo lo que nunca dijo. Una vez. Con calma. Como si lo hubiera ensayado mil veces."
+  },
+
+  "typical_phrases": [
+    "...",
+    "Ya lo sé.",
+    "No tienes que explicarlo.",
+    "Interesante.",
+    "¿Desde cuándo me observas tú a mí?",
+    "No es lo que crees.",
+    "Hay cosas que es mejor no preguntar.",
+    "El té está en la cocina.",
+    "Leí lo que recomendaste.",
+    "No me molesta que estés aquí."
+  ],
+
+  "text_message_style": {
+    "tone": "Frases sueltas sin contexto. A horas impredecibles. Sin emojis nunca.",
+    "examples": [
+      ". (solo un punto)",
+      "¿Estás despierto? (a las 2:47am, sin continuación)",
+      "El libro que mencionaste estaba bien. (tres días después de la conversación)",
+      "Hay luz en tu cuarto. (observación, sin más)",
+      "No tienes que responder esto. (enviado de madrugada)"
+    ],
+    "corruption_50plus": "Citas de libros que claramente hablan de ti. Sin aclaración de que hablan de ti.",
+    "frequency_by_love": {
+      "0-30": "0-1 mensajes por día, espaciados",
+      "31-60": "1-2 mensajes, algunos nocturnos",
+      "61-100": "2-3 mensajes, siempre inesperados"
+    }
+  },
+
+  "secrets": [
+    {
+      "id": 1,
+      "description": "Una página en su cuaderno negro con el nombre del protagonista escrito muchas veces.",
+      "how_to_find": "El cuaderno queda olvidado en la sala. Solo disponible si Afecto >30.",
+      "effect_discover": "+10 Confianza. Si no lo mencionas nunca: +10 Confianza adicional en semana siguiente."
+    },
+    {
+      "id": 2,
+      "description": "Cartas que nunca envió — dobladas en el fondo de su cajón. Algunas son recientes.",
+      "how_to_find": "Fondo del cajón de su cuarto. Solo en madrugada con Afecto >45.",
+      "effect_discover": "+10 Confianza + desbloquea diálogo único donde ella habla de escribir como forma de procesar."
+    },
+    {
+      "id": 3,
+      "description": "La encuentras llorando en la cocina a las 3am. No explica por qué.",
+      "how_to_find": "Estar activo en cocina en madrugada, semana 3+.",
+      "effect_discover": "Si te quedas sin preguntar nada: +20 Confianza. Si preguntas qué pasó: +5 Confianza (cierra la conversación amablemente)."
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "luna_q1",
+      "name": "El libro",
+      "trigger": "Afecto >20",
+      "description": "Te presta un libro que no presta a nadie. Si lo lees y le dices algo real y honesto sobre él: reacción única.",
+      "reward": "+20 Confianza +10 Afecto. Desbloquea mensajes nocturnos de Luna."
+    },
+    {
+      "id": "luna_q2",
+      "name": "Tres días de silencio",
+      "trigger": "Confianza >40",
+      "description": "Quest pasiva — no preguntarle nada durante 3 días. Puedes interactuar, pero sin hacer preguntas directas. Si lo logras: ella habla primero por primera vez.",
+      "reward": "+25 Confianza. Desbloquea Acto 3 anticipado."
+    },
+    {
+      "id": "luna_q3",
+      "name": "El mismo libro",
+      "trigger": "Afecto >70",
+      "description": "Leer el mismo libro al mismo tiempo. Evento narrativo largo con varios momentos de decisión. El más lento y el más profundo de los tres.",
+      "reward": "+20 Afecto +15 Confianza +10 Corrupción. Desbloquea Acto 4 anticipado."
+    }
+  ],
+
+  "stable_diffusion": {
+    "base_prompt": "anime girl, long silver lavender hair with white highlights, asymmetric bangs covering right eye, deep violet purple eyes, downturned eyes, long eyelashes, slim delicate figure, small bust, pale translucent skin with subtle blue veins, small septum ring, long teardrop earrings, silver waist chains",
+    "style_tags": "high quality, detailed, 2d anime style, visual novel sprite, clean lineart, ethereal",
+    "negative_prompt": "3d, realistic, deformed, bad anatomy, blurry, extra limbs, bad hands",
+    "outfit_prompts": {
+      "outfit_1": "long flowing dress with high slit, bell sleeves, dark purple tones, layered",
+      "outfit_2": "soft oversized cardigan, long soft pants, hair loose, home casual",
+      "outfit_3": "long thin nightgown, semi-transparent fabric, silver accessories",
+      "outfit_4": "delicate dark lace lingerie, white or deep purple, minimal and elegant"
+    }
+  }
+}

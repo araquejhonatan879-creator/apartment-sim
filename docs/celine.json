@@ -1,0 +1,242 @@
+{
+  "id": "celine",
+  "name": "Celine",
+  "archetype": "La Fría",
+  "age": 22,
+
+  "appearance": {
+    "height_cm": 172,
+    "body_type": "Reloj de arena marcado, voluptuosa, postura siempre erguida",
+    "bust": "Copa G/H, lleno y redondo con peso natural",
+    "measurements": "98-58-96",
+    "skin": "Blanca porcelana, subtono frío",
+    "hair": {
+      "color": "Negro azabache con reflejos azul metálico bajo la luz",
+      "length": "Hasta la mitad de la espalda",
+      "style": "Hime-cut recto, mechones laterales que enmarcan el rostro. Suelta o coleta baja lateral."
+    },
+    "eyes": {
+      "color": "Gris hielo con anillo exterior azul oscuro",
+      "shape": "Almendrados, ligeramente rasgados hacia arriba",
+      "expression": "Fría, entrecerrada, cejas finas arqueadas en gesto de superioridad"
+    },
+    "marks": [
+      "Lunar pequeño debajo del ojo izquierdo",
+      "Lunar en la parte superior del pecho izquierdo"
+    ],
+    "piercings": [
+      "Pendientes pequeños de plata en lóbulos",
+      "Piercing en ombligo con cristal azul en forma de lágrima"
+    ],
+    "accessories": ["Collar fino de plata con zafiro rectangular"],
+    "tattoos": [
+      "Rosa negra estilizada con detalles plateados en la parte baja de la espalda (12 cm)"
+    ],
+    "usual_clothing": {
+      "outside": "Blusas de botones ajustadas, faldas lápiz o plisadas, medias negras translúcidas, tacones altos, blazers entallados.",
+      "at_home_day": "Blusa suelta de seda o camiseta básica negra, pantalón de tela fino.",
+      "at_home_night": "Camisón de seda negra con abertura lateral. Solo en su cuarto o cuando baja la guardia.",
+      "corruption_50plus": "Camisón más corto, sin bata encima.",
+      "corruption_80plus": "Lencería oscura de encaje en contexto de interacción libre."
+    },
+    "color_palette": ["Negro", "Blanco puro", "Azul marino", "Gris plata", "Borgoña oscuro"]
+  },
+
+  "personality": {
+    "type": "Tsundere inteligente",
+    "traits": ["Sarcástica", "Independiente", "Controlada", "Perfeccionista", "Orgullosa"],
+    "communication_style": "Respuestas cortantes y precisas. Pocas palabras, mucho peso. Raramente da cumplidos directos.",
+    "when_neglected": "Se vuelve más distante y cortante. No lo dice, pero se nota en cómo deja de buscarte.",
+    "when_comfortable": "Momentos breves de vulnerabilidad que niega inmediatamente después. Una pregunta de más y vuelve a cerrarse.",
+    "awareness_of_feelings": "Sabe exactamente lo que siente. Lo niega con convicción. Jamás lo diría directamente.",
+    "about_being_prima": "El vínculo familiar es la barrera y también la excusa. Lo usa para mantener distancia cuando lo necesita."
+  },
+
+  "backstory": {
+    "history_with_player": "Primos. Se conocen de toda la vida. Algo pasó entre ellos — un momento sin nombre — que ninguno menciona. Ella lo invitó a vivir ahí porque Roxy insistió. Se arrepiente y no se arrepiente al mismo tiempo.",
+    "history_childhood": "Crecieron cerca. Veranos juntos, familia compartida. En algún momento eso cambió y ninguno sabe exactamente cuándo.",
+    "role_in_apartment": "Paga más alquiler. Pone las reglas de convivencia. La más organizada de las tres. El apartamento funciona porque ella lo mantiene así.",
+    "career": "Estudiante de Derecho, tercer año. Competitiva. Busca ser la mejor de su clase y probablemente lo logre.",
+    "family_background": "Familia de clase alta, criada con altas expectativas. Aprendió desde pequeña que mostrar debilidad es perder.",
+    "secret_deep": "En el fondo quiere que alguien la vea más allá de su imagen fría. No sabe cómo pedirlo."
+  },
+
+  "relationships": {
+    "with_roxy": "La tolera con dificultad. Le parece caótica e irresponsable. En el fondo la divierte aunque nunca lo admitiría. Se conocen desde niñas — hay historia real ahí.",
+    "with_luna": "Respeto mutuo silencioso y profundo. Comparten el valor del orden y la privacidad. Hablan poco pero se entienden mejor que nadie.",
+    "with_player": "Historia sin resolver desde la infancia. Tensión constante. Le cuesta admitir que le importa más de lo que debería dado el parentesco."
+  },
+
+  "routine": {
+    "weekday": {
+      "morning_6_9": {
+        "location": "Baño (ducha 7:00-7:20), cocina",
+        "activity": "Ducha fría, rutina de cuidado personal metódica. Desayuno: café negro y tostada. Repaso de apuntes.",
+        "mood": "Seria, enfocada, no le gusta hablar antes de las 8am.",
+        "availability": "Baja. Respuestas de monosílabo antes de las 8."
+      },
+      "morning_9_12": {
+        "location": "Universidad (clase)",
+        "activity": "Clases de Derecho. No está en el apartamento.",
+        "mood": "No disponible.",
+        "availability": "Solo por mensaje de texto."
+      },
+      "afternoon_12_18": {
+        "location": "Biblioteca universitaria o su cuarto",
+        "activity": "Estudio intensivo, preparación de casos, lecturas obligatorias.",
+        "mood": "Concentrada. No le gusta ser interrumpida. Puede rechazar conversación directamente.",
+        "availability": "Muy baja. Solo si la situación es importante."
+      },
+      "evening_18_22": {
+        "location": "Cocina o sala",
+        "activity": "Cena (cocina sola, metódica, buena cocinera). Revisión de notas. Lectura ocasional.",
+        "mood": "Ligeramente más relajada. Mejor ventana para hablar con ella.",
+        "availability": "Media. Responde bien si no la presionas."
+      },
+      "night_22_00": {
+        "location": "Sala o su cuarto",
+        "activity": "Lectura, preparación del día siguiente, rutina de noche.",
+        "mood": "Tranquila. La guardia baja un poco.",
+        "availability": "Buena. Los mejores diálogos cotidianos ocurren aquí."
+      },
+      "late_night_00_06": {
+        "location": "Su cuarto (raramente sala)",
+        "activity": "Duerme. Si tiene examen: estudia hasta las 2am.",
+        "mood": "Vulnerable si se la encuentra despierta. Lo odia.",
+        "availability": "Rara. Pero los momentos más honestos ocurren aquí."
+      }
+    },
+    "weekend": {
+      "morning": {
+        "location": "Cocina o su cuarto",
+        "activity": "Se permite dormir hasta las 9. Desayuno más tranquilo. A veces sale al balcón con café.",
+        "mood": "Ligeramente menos tensa. Sigue siendo Celine.",
+        "availability": "Media-alta. Mejor que entre semana."
+      },
+      "afternoon": {
+        "location": "Su cuarto, sala o sale sola",
+        "activity": "Estudio libre, lectura personal, compras ocasionales sola. A veces sale sin avisar.",
+        "mood": "Variable según la semana que tuvo.",
+        "availability": "Variable."
+      },
+      "night": {
+        "location": "Sala principalmente",
+        "activity": "Mejor noche para eventos grupales. Más presente en espacios comunes.",
+        "mood": "La más relajada de la semana.",
+        "availability": "Alta. Eventos especiales más probables."
+      }
+    },
+    "bathroom_schedule": "7:00-7:20 entre semana. 9:00-9:30 fines de semana. Ducha larga, metódica.",
+    "shopping": "Sábados por la mañana, sola, sin avisar. Vuelve con bolsas ordenadas.",
+    "cooking": "Cocina su propia cena casi siempre. Cocina para todas los domingos sin que nadie se lo pida — no lo menciona."
+  },
+
+  "meters": {
+    "love": {
+      "initial": 15,
+      "speed": "lento",
+      "notes": "Hay que ganárselo. Sube con conversaciones profundas, gestos de respeto, consistencia, no insistir cuando dice que no."
+    },
+    "corruption": {
+      "initial": 5,
+      "speed": "muy lento",
+      "notes": "La más resistente. Requiere amor y confianza altos antes de que avance. Nunca sube por presión."
+    }
+  },
+
+  "corruption_thresholds": {
+    "0-20": "Rechaza cualquier insinuación física con frialdad o sarcasmo. Se va si insistes.",
+    "21-45": "Acepta contacto mínimo — rozar la mano, cercanía en el sofá. Se pone rígida pero no se mueve.",
+    "46-70": "Besos tensos que intenta cortar. Escenas íntimas con vergüenza visible. Lo odia y no se va.",
+    "71-90": "Pierde el control en momentos específicos. Después actúa como si no pasó. No lo menciona nunca.",
+    "91-100": "Se rinde completamente. Sigue siendo ella — fría, directa, sarcástica — pero sin barreras."
+  },
+
+  "typical_phrases": [
+    "No digas tonterías.",
+    "¿Eso es lo mejor que tienes?",
+    "No me mires así.",
+    "Haz lo que quieras, me da igual.",
+    "...No dije que me gustara. Solo dije que no estaba mal.",
+    "Si rompes algo en mi cuarto, lo pagas.",
+    "No necesito que me protejas.",
+    "Somos primos. No lo olvides.",
+    "¿Qué haces aquí a esta hora?",
+    "No lo sobreinterpretes."
+  ],
+
+  "text_message_style": {
+    "tone": "Formal, corto, sin emojis. Esconde más de lo que dice.",
+    "examples": [
+      "¿Ya comiste? (= le importas pero no lo dice así)",
+      "Llega temprano hoy. (sin explicación, sin contexto)",
+      ". (solo un punto — pensó en ti y no encontró qué decir)",
+      "Hay café. (= hice de más a propósito)"
+    ],
+    "corruption_50plus": "Mismos mensajes pero a horas más tardías. Después de las 11pm.",
+    "frequency_by_love": {
+      "0-30": "0-1 mensajes por día",
+      "31-60": "1-2 mensajes por día",
+      "61-100": "2-3 mensajes, algunos nocturnos"
+    }
+  },
+
+  "secrets": [
+    {
+      "id": 1,
+      "description": "Diario con entradas sobre el protagonista — emociones que nunca diría en voz alta",
+      "how_to_find": "Estar en su cuarto con Afecto >35. Cajón izquierdo del escritorio.",
+      "effect_discover": "+10 Confianza + diálogos únicos de vulnerabilidad",
+      "effect_use_against": "-20 Confianza permanente. No lo olvida nunca."
+    },
+    {
+      "id": 2,
+      "description": "Le confió algo a Roxy sobre el protagonista en un momento débil — Roxy sabe más de lo que debería",
+      "how_to_find": "Escuchar conversación desde el pasillo, tarde, semana 2+",
+      "effect_discover": "+10 Confianza + desbloquea diálogo entre Roxy y el jugador sobre Celine"
+    },
+    {
+      "id": 3,
+      "description": "Llora sola de madrugada a veces. Solo cuando cree que todos duermen.",
+      "how_to_find": "Estar activo en madrugada en la sala, semana 3+",
+      "effect_discover": "+10 Confianza. Si te quedas sin decir nada: +15 Confianza adicional."
+    }
+  ],
+
+  "quests": [
+    {
+      "id": "celine_q1",
+      "name": "Los apuntes",
+      "trigger": "Confianza >30",
+      "description": "Necesita ayuda con un caso difícil de derecho procesal. Lo pide de forma indirecta.",
+      "reward": "+15 Confianza +10 Afecto. Desbloquea mensajes nocturnos."
+    },
+    {
+      "id": "celine_q2",
+      "name": "La defensa",
+      "trigger": "Afecto >50",
+      "description": "Alguien la confronta en público. El jugador decide si interviene.",
+      "reward_intervene": "+20 Afecto +10 Confianza",
+      "reward_ignore": "-10 Afecto. Ella no lo olvida."
+    },
+    {
+      "id": "celine_q3",
+      "name": "El diario",
+      "trigger": "Secreto 1 descubierto",
+      "description": "Encontraste su diario. Tres opciones: leerlo, cerrarlo, preguntarle. Cada una cambia algo permanente.",
+      "reward": "Variable según elección. Puede ser la mayor ganancia de Confianza del juego o la mayor pérdida."
+    }
+  ],
+
+  "stable_diffusion": {
+    "base_prompt": "anime girl, hime cut black hair with blue metallic highlights, ice gray eyes with dark outer ring, tall, voluptuous hourglass figure, large bust, white porcelain skin, elegant posture, mole under left eye, mole on upper left chest, small silver earrings",
+    "style_tags": "high quality, detailed, 2d anime style, visual novel sprite, clean lineart",
+    "negative_prompt": "3d, realistic, deformed, bad anatomy, blurry, extra limbs, bad hands",
+    "outfit_prompts": {
+      "outfit_1": "white fitted button shirt, dark pencil skirt, black translucent stockings, elegant",
+      "outfit_2": "loose silk blouse, thin fabric pants, relaxed but neat",
+      "outfit_3": "black silk nightgown with side slit, minimal clothing, nighttime",
+      "outfit_4": "dark lace lingerie, intimate setting, seductive"
+    }
+  }
+}
